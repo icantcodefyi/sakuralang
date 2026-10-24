@@ -168,7 +168,7 @@ jobs:
         run: |
           rustup show active-toolchain || rustup toolchain install
           rustup target add wasm32-unknown-unknown
-      - uses: Swatinem/rust-cache@6323deb102c322ba6fcbdcafc7e3dddab59af2b6 # v2.9.2
+      - uses: Swatinem/rust-cache@d1527c8f67ef9af357290475d4af4b0fab8f12e0 # v2.9.3
         with:
           workspaces: compiler
           # Older caches may embed an empty runtime built without the WASM target.
@@ -340,7 +340,7 @@ jobs:
           rustup toolchain install "$msrv" --profile minimal --target wasm32-unknown-unknown
           echo "MSRV=$msrv" >> "$GITHUB_ENV"
           echo "RUSTUP_TOOLCHAIN=$msrv" >> "$GITHUB_ENV"
-      - uses: Swatinem/rust-cache@6323deb102c322ba6fcbdcafc7e3dddab59af2b6 # v2.9.2
+      - uses: Swatinem/rust-cache@d1527c8f67ef9af357290475d4af4b0fab8f12e0 # v2.9.3
         with:
           workspaces: compiler
           shared-key: msrv-${{ env.MSRV }}
@@ -465,7 +465,7 @@ jobs:
         run: |
           rustup show active-toolchain || rustup toolchain install
           rustup target add wasm32-unknown-unknown
-      - uses: Swatinem/rust-cache@6323deb102c322ba6fcbdcafc7e3dddab59af2b6 # v2.9.2
+      - uses: Swatinem/rust-cache@d1527c8f67ef9af357290475d4af4b0fab8f12e0 # v2.9.3
         with:
           workspaces: compiler
           cache-workspace-crates: true
@@ -555,7 +555,7 @@ jobs:
         run: |
           rustup show active-toolchain || rustup toolchain install
           rustup target add wasm32-unknown-unknown
-      - uses: Swatinem/rust-cache@6323deb102c322ba6fcbdcafc7e3dddab59af2b6 # v2.9.2
+      - uses: Swatinem/rust-cache@d1527c8f67ef9af357290475d4af4b0fab8f12e0 # v2.9.3
         with:
           workspaces: compiler
           cache-workspace-crates: true
@@ -595,7 +595,7 @@ jobs:
       - name: Install pinned Rust toolchain
         working-directory: compiler
         run: rustup show active-toolchain || rustup toolchain install
-      - uses: Swatinem/rust-cache@6323deb102c322ba6fcbdcafc7e3dddab59af2b6 # v2.9.2
+      - uses: Swatinem/rust-cache@d1527c8f67ef9af357290475d4af4b0fab8f12e0 # v2.9.3
         with:
           workspaces: compiler
           key: vscode
@@ -671,7 +671,7 @@ jobs:
       - name: Install pinned Rust toolchain
         working-directory: compiler
         run: rustup show active-toolchain || rustup toolchain install
-      - uses: Swatinem/rust-cache@6323deb102c322ba6fcbdcafc7e3dddab59af2b6 # v2.9.2
+      - uses: Swatinem/rust-cache@d1527c8f67ef9af357290475d4af4b0fab8f12e0 # v2.9.3
         with:
           workspaces: editors/tree-sitter-sakura
           key: tree-sitter
@@ -746,7 +746,7 @@ jobs:
         run: |
           rustup show active-toolchain || rustup toolchain install
           rustup target add wasm32-unknown-unknown
-      - uses: Swatinem/rust-cache@6323deb102c322ba6fcbdcafc7e3dddab59af2b6 # v2.9.2
+      - uses: Swatinem/rust-cache@d1527c8f67ef9af357290475d4af4b0fab8f12e0 # v2.9.3
         with:
           workspaces: compiler
           cache-workspace-crates: true
